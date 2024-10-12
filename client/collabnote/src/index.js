@@ -4,6 +4,7 @@ import './index.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Login from '../src/pages/login';
 import Register from '../src/pages/register';
+import Homepage from '../src/pages/homepage';
 import {AuthProvider} from './contexts/auth-context';
 import {ToastProvider} from './contexts/toast-context';
 import VerifyEmail from "../src/pages/user/verify-email";
@@ -17,7 +18,7 @@ root.render(
       <AuthProvider>
         <ToastProvider>
           <Routes>
-            <Route path="/" element={<h1>I am Home Page</h1>}/>
+            <Route path="/" element={<Homepage/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/user/verify-email/:token" element={<VerifyEmail/>}/>

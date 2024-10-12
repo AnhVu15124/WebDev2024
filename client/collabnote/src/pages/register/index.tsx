@@ -6,10 +6,11 @@ import {ToastContext} from "../../contexts/toast-context";
 import AuthService from "../../services/auth-service";
 import axios, {AxiosError} from "axios";
 import TextField from "../../components/atoms/text-fields/text-fields";
+import Logo from "../../components/atoms/logo/logo";
 
 
 const Register = () => {
-    const { widthStr, heightStr } = useWindowSize();
+    const {widthStr, heightStr} = useWindowSize();
     const [email, setEmail] = useState("");
     const [emailErrors, setEmailErrors] = useState<Array<string>>([]);
     const [loading, setLoading] = useState(false);
@@ -20,7 +21,7 @@ const Register = () => {
   
     const navigate = useNavigate();
     const { addToast, error } = useContext(ToastContext);
-  
+
     const validate = () => {
       setEmailErrors([]);
       setPassword_registerErrors([]);
@@ -54,7 +55,9 @@ const Register = () => {
     };
     const register = async () => {
         if (!validate()) return;
-    
+
+        setLoading(true);
+
         try {
           await AuthService.register({
               email,
@@ -127,8 +130,8 @@ const Register = () => {
         >
           <div className="w-full max-w-lg bg-white dark:bg-slate-800 rounded border-primary shawdow-md border dark:border-0 dark:shadow-xl p-6 ">
             <div className="flex flex-col space-y-4">
-              <div className="w-full text-center flex-col justify-center items-center">
-                <h1>Logo</h1>
+              <div className="w-full text-center flex-col justify-center items-center flex items-center">
+                <Logo/>
                 <h1 className="text-cyan-500 font-bold text-3xl">Collaborative Note-Taking</h1>
                 <h1 className="text-cyan-500 font-bold text-2xl">Sign up</h1>
               </div>

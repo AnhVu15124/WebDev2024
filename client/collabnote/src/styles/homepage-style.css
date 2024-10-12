@@ -1,0 +1,75 @@
+.homepage {
+    width: 99,99vw;
+    height: 100vh;
+    background-color: #d0f5ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+.hero-section {
+  height: 10%; /* Top white section */
+  background-color: white;
+  display: flex;
+  justify-content: space-between; /* Align items */
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Add some padding */
+}
+
+.hero-content {
+  height: 80%; /* Middle blue section */
+  background-color: #1e3a8a; /* Blue background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.description {
+  color: white; /* Text color */
+  margin: 10px 0; /* Margin around the text */
+  text-align: center; /* Center align text */
+}
+
+.buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.btn {
+  padding: 10px 20px; /* Button padding */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white; /* Default button text color */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3b82f6; /* Primary button color */
+}
+
+.btn-secondary {
+  background-color: #2563eb; /* Secondary button color */
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #1d4ed8; /* Darker shade on hover */
+}
+
+.info-section {
+  height: 10%; /* Bottom white section */
+  background-color: white; /* White background */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-around; /* Space between info */
+  width: 100%; /* Full width for info content */
+}

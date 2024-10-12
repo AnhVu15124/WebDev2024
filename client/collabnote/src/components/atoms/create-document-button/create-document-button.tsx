@@ -23,7 +23,7 @@ const CreateDocumentButton = () => {
 
       navigate(`/document/${id}`);
     } catch (err) {
-      error("Unable to create a new document. Please try again");
+      error("Unable to create a new note. Please try again");
     } finally {
       setLoading(false);
     }
