@@ -10,6 +10,8 @@ import {ToastProvider} from './contexts/toast-context';
 import VerifyEmail from "../src/pages/user/verify-email";
 import AuthRoute from "./components/molecules/auth-route";
 import Create from "./pages/document/create";
+import Document from "../src/pages/document/index";
+import { DocumentProvider } from "./contexts/document-context";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +25,13 @@ root.render(
             <Route path="/register" element={<Register/>}/>
             <Route path="/user/verify-email/:token" element={<VerifyEmail/>}/>
             <Route path="/document/create" element={<AuthRoute element={<Create />} />} />
+            <Route
+              path="/document/:id" element={<AuthRoute element={
+                    <DocumentProvider>
+                        <Document />
+                    </DocumentProvider>
+                  }/>
+              }/>
           </Routes>
         </ToastProvider>
       </AuthProvider>

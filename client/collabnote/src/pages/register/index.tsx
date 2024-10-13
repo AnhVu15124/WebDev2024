@@ -55,9 +55,7 @@ const Register = () => {
     };
     const register = async () => {
         if (!validate()) return;
-
-        setLoading(true);
-
+        
         try {
           await AuthService.register({
               email,
@@ -74,8 +72,9 @@ const Register = () => {
         }
         catch (err) {
           if (axios.isAxiosError(err)) {
-            const { response } = err as AxiosError;
+            const {response} = err as AxiosError;
             const errors = (response as any).data.errors;
+
             const emailFieldErrors = errors
               .filter((error: any) => error.param === "email")
               .map((error: any) => error.msg);

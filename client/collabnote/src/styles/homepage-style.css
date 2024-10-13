@@ -1,75 +1,160 @@
-.homepage {
-    width: 99,99vw;
-    height: 100vh;
-    background-color: #d0f5ff; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-.hero-section {
-  height: 10%; /* Top white section */
-  background-color: white;
+.header {
+  width: 99vw;
+  height: 8vh;
+  background-color: #ffffff; 
   display: flex;
-  justify-content: space-between; /* Align items */
-  align-items: center; /* Center items vertically */
-  padding: 0 20px; /* Add some padding */
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 0 100px; 
 }
 
-.hero-content {
-  height: 80%; /* Middle blue section */
-  background-color: #1e3a8a; /* Blue background */
+.header svg {
+  margin-right: 20px;
+}
+
+.header .name {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  color: #203957;
 }
 
-.description {
-  color: white; /* Text color */
-  margin: 10px 0; /* Margin around the text */
-  text-align: center; /* Center align text */
+.header .name h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold; 
 }
 
-.buttons {
+.header .name h2 {
+  margin: 0;
+  font-size: 20px; 
+}
+
+
+.body {
+  width: 99vw;
+  height: 84vh;
+  background-color: #d0f5ff;
   display: flex;
-  gap: 20px; /* Space between buttons */
+  justify-content: center; 
+  align-items: center; 
+  padding: 0;
+  flex-direction: row; 
 }
 
-.btn {
-  padding: 10px 20px; /* Button padding */
-  border: none;
-  border-radius: 5px;
+.body .description {
+  width: 50%; 
+  color: #203957;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: left; 
+  padding: 0;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.body .description .title {
+  font-size: 50px; 
+  margin-bottom: 20px; 
+  font-weight: bold; 
+}
+
+.body .description p {
+  font-size: 25px; 
+  line-height: 1.6; 
+  font-weight: bold; 
+
+}
+
+.body .account {
+  width: 50%;
+  height: 100%;
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body .account h1 {
+  font-size: 45px;
+  font-weight: bold; 
+  color: #203957; 
+}
+.body .account h2 {
+  font-size: 25px;
+  color: #203957; 
+  margin-bottom: 20px;
+}
+
+.body .account .box {
+  width: 80%;
+  height: 80%;
+  background-color: white; 
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.body .account .buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.body .account .btn {
+  background-color: #0027ff;
+  color: white;
+  padding: 10px 20px;
   text-decoration: none;
-  color: white; /* Default button text color */
-  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
   cursor: pointer;
+  width: 200px;
 }
 
-.btn-primary {
-  background-color: #3b82f6; /* Primary button color */
+.body .buttons .btn:hover {
+  background-color: #001a99;
 }
 
-.btn-secondary {
-  background-color: #2563eb; /* Secondary button color */
+.whitebox {
+  width: 99vw;
+  height: 8vh;
+  background-color: #ffffff; 
 }
 
-.btn-primary:hover, .btn-secondary:hover {
-  background-color: #1d4ed8; /* Darker shade on hover */
-}
-
-.info-section {
-  height: 10%; /* Bottom white section */
-  background-color: white; /* White background */
+.function {
+  width: 90vw; 
+  height: 40vw;
+  color: #203957;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  flex-direction: column; 
+  justify-content: start;
+  align-items: left;
+  padding: 0;
+  text-align: left;
+  margin-left: 200px;
+}
+.function h1{
+  font-size: 35px;
+  font-weight: bold; 
+}
+.function .line1 {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.function p {
+  font-size: 20px;
+  margin-left: 10px;
 }
 
-.info-content {
-  display: flex;
-  justify-content: space-around; /* Space between info */
-  width: 100%; /* Full width for info content */
-}
+
