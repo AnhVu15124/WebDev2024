@@ -26,4 +26,4 @@ class DocumentUser extends Model {
     documentID!: number;                // "Which doc"
 }
 
-export { DocumentUser };
+export {DocumentUser};
