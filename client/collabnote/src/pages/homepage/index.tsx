@@ -103,10 +103,60 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="">
+        <div className="privacy-security">
+          <h1>Privacy & Security</h1>
+          <h2>Privacy Commitment</h2>
+          <p>
+            We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data while using our services. By using our platform, you agree to the collection and use of information in accordance with this policy.
+          </p>
 
+          <h2>Information Collection</h2>
+          <p>We may collect the following types of information:</p>
+          <ul>
+            <li>
+              <strong>Personal Information:</strong> This includes your email address, and any other information you provide when you create an account or interact with our services.
+            </li>
+            <li>
+              <strong>Usage Data:</strong> We automatically collect information about your interactions with our website, including your IP address, browser type, pages visited, and the time spent on each page.
+            </li>
+          </ul>
+
+          <h2>Use of Information</h2>
+          <p>We use the information we collect for various purposes, including:</p>
+          <ul>
+            <li>
+              <strong>To Provide and Maintain Our Service:</strong> Ensuring our platform functions effectively.
+            </li>
+            <li>
+              <strong>To Notify You About Changes:</strong> Informing you about updates to our services or features.
+            </li>
+            <li>
+              <strong>To Provide Customer Support:</strong> Assisting you with any inquiries or issues you may have.
+            </li>
+            <li>
+              <strong>To Monitor Usage:</strong> Analyzing usage patterns to improve our platform.
+            </li>
+          </ul>
+          <h2>Data Security</h2>
+          <p>We take your data security seriously and implement various measures to protect your personal information, including:</p>
+          <ul>
+            <li>
+              <strong>Encryption:</strong> We use encryption technologies to safeguard your data.
+            </li>
+            <li>
+              <strong>Access Controls:</strong> Restricting access to your information to authorized personnel only.
+            </li>
+            <li>
+              <strong>Regular Audits:</strong> Conducting regular security audits to ensure data protection.
+            </li>
+          </ul>
         </div>
-      </div>
+        <div className="contact">
+          <h1>Contact Us</h1>
+          <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+          <p>tunght.22bi13453@usth.edu.vn nguyentt.22bi13343@usth.edu.vn thanhdtt.22bi13406@usth.edu.vn vinhtt.22bi13474@usth.edu.vn vuta.22bi13482@usth.edu.vn</p>
+        </div>
+    </div>
   );
 };
 
