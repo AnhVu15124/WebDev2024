@@ -56,4 +56,4 @@ class UserValidator {
 
 const userValidator = new UserValidator();
 
-export { userValidator };
+export {userValidator};

@@ -33,7 +33,7 @@ class Document extends Model {
     @Column(DataType.STRING)
     title!: string;                 // Title of Doc
 
-    @Column(DataType.STRING)
+    @Column(DataType.JSON)
     content!: string;               // Content of Doc
 
     @ForeignKey(() => User)
@@ -48,7 +48,7 @@ class Document extends Model {
     users!: DocumentUser[];         // Add Relationship
 
     @Default(false)
-    @Column(DataType.BOOLEAN)
+    @Column(DataType.BOOLEAN)   
     isPublic!: boolean;             // is the Doc public or private
 }
 

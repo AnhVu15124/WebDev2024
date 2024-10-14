@@ -23,9 +23,11 @@ const port = env.PORT;
 database.sequelize.sync();
 
 // Test
-app.get('/', (req:Request, res:Response) => {
-    res.send('Server');
-});
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
+// app.get('/', (req:Request, res:Response) => {
+//     res.send('Server');
+// });
+// app.listen(port, () => {
+//     console.log(`Listening on port ${port}`);
+// });
+
+export default app;
