@@ -176,7 +176,7 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
         setEditorState,
         setCurrentFont,
         focusEditor,
-        handleEditorChange,
+        handleEditorChange,,
       }}>
       {children}
     </EditorContext.Provider>
