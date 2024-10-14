@@ -41,8 +41,7 @@ export const EditorContext =
 interface EditorProviderInterface {
   children: JSX.Element;
 }
-
-const DEFAULT_SAVE_TIME = 100;
+const DEFAULT_SAVE_TIME = 1000;
 let saveInterval: null | NodeJS.Timeout = null;
 
 export const EditorProvider = ({ children }: EditorProviderInterface) => {
@@ -53,19 +52,15 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
   );
   const editorRef = useRef<null | Editor>(defaultValues.editorRef);
   const [currentFont, setCurrentFont] = useState(defaultValues.currentFont);
-
   const {document, setCurrentUsers, setSaving, setDocument, saveDocument} =
     useContext(DocumentContext);
   const {error} = useContext(ToastContext);
   const {accessToken} = useAuth();
-
   const focusEditor = () => {
     if (editorRef === null || editorRef.current === null) return;
-
     editorRef.current.focus();
   };
 
-  //Send Changes
   const handleEditorChange = (editorState: EditorState) => {
     setEditorState(editorState);  
 
@@ -90,14 +85,11 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
     if (saveInterval !== null) {
       clearInterval(saveInterval);
     }
-
     saveInterval = setInterval(async () => {
       await saveDocument(updatedDocument);
       if (saveInterval) clearInterval(saveInterval);
     }, DEFAULT_SAVE_TIME);
   };
-
-  //Load document content
   useEffect(() => {
     if (documentRendered || document === null || document.content === null)
       return;
@@ -117,7 +109,6 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
     }
   }, [document]);
 
-  //Connect Socket
   useEffect(() => {
     if (document === null || accessToken === null || socket === null || (socket.current !== null && socket.current.connected))
       return;
@@ -125,14 +116,12 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
     socket.current = io(BASE_URL, {query: { documentID: document.id, accessToken },}).connect();
   }, [document, socket, accessToken]);
 
-  //Disconnect Socket
   useEffect(() => {
     return () => {
       socket?.current?.disconnect();
     };
   }, []);
 
-  //Receive Changes
   useEffect(() => {
     if (socket.current === null) return;
 
@@ -149,7 +138,6 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
     };
   }, [socket.current]);
 
-  //current users updated
   useEffect(() => {
     if (socket.current === null) return;
 
