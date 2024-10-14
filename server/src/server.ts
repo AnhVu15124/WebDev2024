@@ -16,9 +16,9 @@ const io = new Server(server, {
   },
 });
 
-server.listen(port, () => {
+server.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`);
-});
+})
 
 io.on("connection", (socket) => {
   const accessToken = socket.handshake.query.accessToken as string | undefined;
