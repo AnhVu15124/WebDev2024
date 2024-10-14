@@ -36,7 +36,7 @@ class UserService {
             from: process.env.SMTP_USER,
             to: user.email,
             subject: "Verify your email for our Collaborative Note-Taing App",
-            text: `Click this link to verify your email: http://192.168.1.110:3000/user/verify-email/${user.verificationToken}`,
+            text: `Click this link to verify your email: ${process.env.HOST}:${process.env.PORT}/user/verify-email/${user.verificationToken}`,
         }
 
         await mailService.sendMail(mail);
@@ -126,7 +126,7 @@ class UserService {
             from: process.env.SMTP_USER,
             to: user.email,
             subject: "Reset your password for our Collaborative Note-Taking App",
-            text: `Click this link to reset your password: http://192.168.1.110:3000/user/reset-email/${user.passwordResetToken}`,
+            text: `Click this link to reset your password: ${process.env.HOST}:${process.env.PORT}/user/reset-email/${user.passwordResetToken}`,
         };
     
         await mailService.sendMail(mail);
