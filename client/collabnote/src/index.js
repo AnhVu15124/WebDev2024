@@ -11,7 +11,9 @@ import VerifyEmail from "../src/pages/user/verify-email";
 import AuthRoute from "./components/molecules/auth-route";
 import Create from "./pages/document/create";
 import Document from "../src/pages/document/index";
-import { DocumentProvider } from "./contexts/document-context";
+import {DocumentProvider} from "./contexts/document-context";
+import {EditorProvider} from "./contexts/editor-context";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,7 +30,9 @@ root.render(
             <Route
               path="/document/:id" element={<AuthRoute element={
                     <DocumentProvider>
+                      <EditorProvider>
                         <Document />
+                      </EditorProvider>
                     </DocumentProvider>
                   }/>
               }/>

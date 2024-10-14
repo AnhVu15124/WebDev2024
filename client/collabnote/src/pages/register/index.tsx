@@ -8,7 +8,6 @@ import axios, {AxiosError} from "axios";
 import TextField from "../../components/atoms/text-fields/text-fields";
 import Logo from "../../components/atoms/logo/logo";
 
-
 const Register = () => {
     const {widthStr, heightStr} = useWindowSize();
     const [email, setEmail] = useState("");
@@ -20,7 +19,7 @@ const Register = () => {
     const [password_confirmationErrors, setPassword_confirmationErrors] = useState<Array<string>>([]);
   
     const navigate = useNavigate();
-    const { addToast, error } = useContext(ToastContext);
+    const {addToast, error} = useContext(ToastContext);
 
     const validate = () => {
       setEmailErrors([]);
@@ -35,7 +34,7 @@ const Register = () => {
       if (!(password_register.length >= 8 && password_register.length <= 25)) {
         setPassword_registerErrors((prev) => [
           ...prev,
-          "Password must be between 1 and 25 characters",
+          "Password must be between 8 and 25 characters",
         ]);
         isValid = false;
       }
@@ -61,7 +60,7 @@ const Register = () => {
               email,
               password_register,
               password_confirmation,
-            })
+            });
           
             addToast({
               title: `Successfully registered ${email}!`,
@@ -72,31 +71,30 @@ const Register = () => {
         }
         catch (err) {
           if (axios.isAxiosError(err)) {
-            const {response} = err as AxiosError;
-            const errors = (response as any).data.errors;
-
-            const emailFieldErrors = errors
-              .filter((error: any) => error.param === "email")
-              .map((error: any) => error.msg);
-            const password_registerFieldErrors = errors
-              .filter((error: any) => error.param === "password_register")
-              .map((error: any) => error.msg);
-            const password_confirmationFieldErrors = errors
-              .filter((error: any) => error.param === "password_confirmation")
-              .map((error: any) => error.msg);
-    
-            if (emailFieldErrors) setEmailErrors(emailFieldErrors);
-            if (password_registerFieldErrors) setPassword_registerErrors(password_registerFieldErrors);
-            if (password_confirmationFieldErrors) setPassword_confirmationErrors(password_confirmationFieldErrors);
-    
-            if (!emailFieldErrors && !password_registerFieldErrors && !password_confirmationFieldErrors) {
-              error("An unknown error has occured. Please try again");
+              const { response } = err as AxiosError;
+              const errors = (response as any).data.errors;
+        
+              const emailFieldErrors = errors
+                .filter((error: any) => error.param === "email")
+                .map((error: any) => error.msg);
+              const password_registerFieldErrors = errors
+                .filter((error: any) => error.param === "password_register")
+                .map((error: any) => error.msg);
+              const password_confirmationFieldErrors = errors
+                .filter((error: any) => error.param === "password_confirmation")
+                .map((error: any) => error.msg);
+        
+              if (emailFieldErrors.length) setEmailErrors(emailFieldErrors);
+              if (password_registerFieldErrors.length) setPassword_registerErrors(password_registerFieldErrors);
+              if (password_confirmationFieldErrors.length) setPassword_confirmationErrors(password_confirmationFieldErrors);
+        
+              if (!emailFieldErrors.length && !password_registerFieldErrors.length && !password_confirmationFieldErrors.length) {
+                error("An unknown error has occurred. Please try again.");
+              }
+            } else {
+              error("Network error: Unable to connect to the server.");
             }
           } 
-          else {
-            error("An unknown error has occured. Please try again");
-          }
-        } 
         finally {
           setLoading(false);
         }

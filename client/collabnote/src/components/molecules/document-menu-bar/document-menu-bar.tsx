@@ -6,6 +6,7 @@ import DocumentService from "../../../services/document-service";
 import Logo from "../../atoms/logo/logo";
 import UserDropDown from "../../atoms/user-dropdown/user-dropdown";
 import useRandomBackground from "../../../hooks/use-random-background";
+import ShareDocument from "../share-document";
 
 const CurrentUsers = () => {
   const {email} = useAuth();
@@ -92,7 +93,7 @@ const DocumentMenuBar = () => {
       </div>
       <div className="flex items-center flex-shrink-0 pl-3 gap-x-4">
         {document !== null && document.userID === userID && (
-          <h1>Shared Button</h1>
+          <ShareDocument/>
         )}
         <div className="flex items-center gap-x-2">
           <CurrentUsers />

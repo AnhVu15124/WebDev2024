@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../../styles/homepage-style.css";
 
 const Homepage = () => {
@@ -46,54 +46,67 @@ const Homepage = () => {
 
       <div className="function">
         <h1>Easy to keep track of projects, plans, and everything in between.</h1>
-        <div className="line1">
-          <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30" height="30" viewBox="0 0 30 30">
-              <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
-          </svg>
-          <p>Easy to create and delete notes, with no limit on the amount:</p>
+        <div className="function-box-1">
+          <div>
+            <div className="text">
+              <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="30" height="30" viewBox="0 0 30 30">
+                  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
+              </svg>
+              <h2>Easy to create and delete notes, with no limit on the amount:</h2>
+            </div>
+            <p>Create as many notes as you need for your schedules, plans, and projects, </p>
+            <p>ensuring that you can keep everything organized and easily accessible.</p>
+            </div>
+          </div>
+        <div className="function-box-2">
+          <div>
+            <div className="text">
+              <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="30" height="30" viewBox="0 0 30 30">
+                  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
+              </svg>
+              <h2>Create restricted or public notes with ease:</h2>  
+            </div>
+              <p>Create notes that can be either restricted for private use or public</p>
+              <p> for sharing with anyone, all with just a few clicks.</p>
+          </div>
         </div>
-        <p>Create as many notes as you need for your schedules, plans, and projects, ensuring that you can keep everything organized and easily accessible.</p>
-        <div className="line1">
-          <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30" height="30" viewBox="0 0 30 30">
-              <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
-          </svg>
-          <p>Includes a search bar for quick note access:</p>
+        <div className="function-box-3">
+          <div>
+            <div className="text">
+              <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="30" height="30" viewBox="0 0 30 30">
+                  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
+              </svg>
+              <h2>No limit on the number of people you can share with:</h2>
+            </div>
+            <p>"Share your notes with as many people as you want"</p>
+            <p>", with no limit on the number of collaborators."</p>
+          </div>
         </div>
-        <p>Includes a search bar for quick access to your notes, making it easy to find exactly what you need without any hassle.</p>
-        <div className="line1">
-          <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30" height="30" viewBox="0 0 30 30">
-              <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
-          </svg>
-          <p>Create restricted or public notes with ease:</p>  
+        <div className="function-box-4">
+          <div>
+            <div className="text">
+              <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="30" height="30" viewBox="0 0 30 30">
+                  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
+              </svg>
+              <h2>Edit in real-time with others:</h2>
+            </div>
+            <p>Edit your notes in real-time with others anywhere, anytime</p>
+            </div>
+          </div>
         </div>
-        <p>Create notes that can be either restricted for private use or public for sharing with anyone, all with just a few clicks.</p>
-        <div className="line1">
-          <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30" height="30" viewBox="0 0 30 30">
-              <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
-          </svg>
-          <p>No limit on the number of people you can share with:</p>
+
+        <div className="">
+
         </div>
-        <p>"Share your notes with as many people as you want, with no limit on the number of collaborators."</p>
-        <div className="line1">
-          <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30" height="30" viewBox="0 0 30 30">
-              <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABMpJREFUeF7tmmtoHFUUx39nk9a2asEXUrFoTXdn89A2pEJ8tFIRpSpKFZRW8k20PlARLKKIfrAKFpGKWsVv0mBBqO8KRYzV+qpaWmO6O7uCYtXgC19Uq8nusTebBEt3bubuztbZzc6X/XLOvf/ff8+9c+fMCNP8kmnOT9OAZgVMcweaS2CaF0BzE2wugeYSqHcH8tpNkRNIsIek/OiKU79LwNcTgZeBc8eh/wEexpMHXEyoTwNUW/B5F+Gcw2CVPtKyKawJ9WmAr3cCjwZADuDJhY1rQF7bKPAZwpyykMou0tLTmAaoClm2keAiC+BjeGIqJNRVX0vA1+uBZy1k+ynSRbt8FYoe6ugkuFfn0coQynGBcMLtpOTxsPAmrn4qIKNbDt7rVwbCFfmINOchUmg8A3y9FtgcCKb8TQs9JGXIBb4+KiCj5pRnwE62lP59pORBV/j6MMDX54A+C9wgIyyhS8xJ0PmK9x7g6wpgq6X0C2OnQU8+diYfT4ivAXv0aGYxCCywGLCetKytFD7eS8DXJ4BbLHBfcoAzWST7G8+AvPZS4D2ERFk4RREuxpM3q4GPZwXk9ShG2UWCDkvpP0Na1lQLH08DfF0H3GOBG2YmHSyQXxvPgKyehfAJMMMCtxJPXooCPl4VMKCtnMKHQPCjbJHNtMuqqODjZYCvd4+1tIKvn5lBJ2fI941nQEZTCLsRZls2PqdWV1iT/v+DkGly5DC3M1sb6w08uTQslEucuwG+LqLIOhL0UGSYBBvxxNaksOvJ6hqEjZagP2ilizb52gUsbKybATltR9kJHHPIBMIGUnJH2Ekn4/J6KgWGEOZacm/Fkyedxw6Z4GZAVvsRVpcdW1hLStaHnLcU5uurwOWWnB2kuACRotO4DsFuBuR0EKWr7PhKEeE6PAluXPw3MaerUfotm94BhG48yTrwOIe6GZDR10hwmUW06cxcQlK2W5WU3upkAPMbdN2LJw85EzkmuBmQ02UUeRux9BKFXxDOJyl7A7XYlpJJUnYzzNksl1FHHudwNwNK6/b+gz/292/Kt7TQS1K+OUyRr+Z29rpF6ShFemmXT51pKkhwN8BMktOnUG6aYr5BWllKm/w2GZfXuRT4HGG+Jde84LQ9DFWAGZxSmQHm5WSeLShXTKHmLUZYMdmvy+rTCDdacnLMYTHz5a9IKS2DVWaAGTCrx6JsJ0G3VazQT5I+vmAZBQYC9w9zF0mwnJS8c6TgzTyVG2CyzduaFj4ATptCtHnIuRpIBcaZ02BKbj6S8NUbUNoPzOlwB3B8FeK/YyadUTU5XHRUVwETM/m6FGUbwiyXySdjlStJyysV5VaZFI0BpT3hGuD5wEZmsNBNeGJ78VEloj09OgNKy+EulEccFP9EC50slB8cciINjdaAUiVsQLgtpMpVoZ8dQg7oGha9AaoJcrwAXGUVo2wlLcHPFa4kFcZHb4ARsk9n8+dYl2fiE7ZD5Sm/jzU5Fsq+CnVHllYbA4y8vJ5EkfeBhWXU3lBVFyky/GoPQlMJyejpCC8iLB4PHRn/mNE8UMXiql0FTOCV9oQlKPMospMOGY4F+biI2hsQJ9oyWpoGxPwPqrm8ZgXU3OKYT9CsgJj/QTWX16yAmlsc8wmmfQX8Cx69K1Cn40UqAAAAAElFTkSuQmCC" width="30" height="30"/>
-          </svg>
-          <p>Edit in real-time with others:</p>
-        </div>
-        <p>Edit your notes in real-time with others anywhere, anytime</p>
-      
       </div>
-    </div>
   );
 };
 
