@@ -26,7 +26,7 @@ import {ChangeEvent, KeyboardEvent, useContext, useRef, useState} from "react";
         return;
   
       const payload = {
-        documentID: document.id,
+        documentId: document.id,
         email: email,
         permission: PermissionEnum.EDIT,
       };

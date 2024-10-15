@@ -6,7 +6,7 @@ interface DocumentInterface {
   content: string | null;
   createdAt: Date;
   updatedAt: Date;
-  userID: number;
+  userId: number;
   users: Array<DocumentUser>;
   isPublic: boolean;
 }

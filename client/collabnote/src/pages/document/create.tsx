@@ -10,15 +10,15 @@ import "../../styles/create-document-style.css";
 
 const Create = () => {
   const {heightStr} = useWindowSize();
-  const {userID } = useAuth();
+  const {userId } = useAuth();
   const {documents, loading, setDocuments} = useDocuments();
   const [activeTab, setActiveTab] = useState("recent");
 
   const recentDocuments =
-    documents === null ? [] : documents.filter((document) => document.userID === userID);
+    documents === null ? [] : documents.filter((document) => document.userId === userId);
 
   const sharedDocuments =
-    documents === null ? [] : documents.filter((document) => document.userID !== userID);
+    documents === null ? [] : documents.filter((document) => document.userId !== userId);
 
   return (
     <div style={{ height: heightStr }}>

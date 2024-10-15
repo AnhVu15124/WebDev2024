@@ -22,8 +22,8 @@ const SharedUsers = ({ documentUsers, setDocument }: SharedUserProps) => {
   const {document} = useContext(DocumentContext);
 
   const removeDocumentUser = async (payload: {
-    documentID: number;
-    userID: number;
+    documentId: number;
+    userId: number;
   }) => {
     if (!accessToken) return;
     setLoading(true);
@@ -33,7 +33,7 @@ const SharedUsers = ({ documentUsers, setDocument }: SharedUserProps) => {
       setDocument({
         ...document,
         users: document?.users.filter(
-          (documentUser) => documentUser.userID !== payload.userID
+          (documentUser) => documentUser.userId !== payload.userId
         ) as Array<DocumentUser>,
       } as DocumentInterface);
     } 
@@ -76,8 +76,8 @@ const SharedUsers = ({ documentUsers, setDocument }: SharedUserProps) => {
             <button
               onClick={() =>
                 removeDocumentUser({
-                  documentID: documentUser.documentID,
-                  userID: documentUser.userID,
+                  documentId: documentUser.documentId,
+                  userId: documentUser.userId,
                 })
               }
               disabled={loading}

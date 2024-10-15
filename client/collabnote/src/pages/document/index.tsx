@@ -8,9 +8,9 @@ import DocumentEditor from "../../components/organisms/document-editor/document-
 
 const Document = () => {
   const {heightStr, widthStr} = useWindowSize();
-  const {id: documentID} = useParams();
+  const {id: documentId} = useParams();
   const documentHeaderRef = useRef<null | HTMLDivElement>(null);
-  const {loading, document} = useDocument(parseInt(documentID as string));
+  const {loading, document} = useDocument(parseInt(documentId as string));
   const {setDocument} = useContext(DocumentContext);
   const documentViewerHeight = `calc(${heightStr} - ${documentHeaderRef.current?.clientHeight}px)`;
 

@@ -11,8 +11,8 @@ const DocumentService = {
       }
     );
   },
-  get: (accessToken: string, documentID: number) => {
-    return API.get(`document/${documentID}`, {
+  get: (accessToken: string, documentId: number) => {
+    return API.get(`document/${documentId}`, {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   },
@@ -26,8 +26,8 @@ const DocumentService = {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   },
-  delete: (accessToken: string, documentID: number) => {
-    return API.delete(`document/${documentID}`, {
+  delete: (accessToken: string, documentId: number) => {
+    return API.delete(`document/${documentId}`, {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   },

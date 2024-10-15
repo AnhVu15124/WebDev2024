@@ -30,7 +30,7 @@ const CurrentUsers = () => {
 };
 
 const DocumentMenuBar = () => {
-  const {accessToken, userID} = useAuth();
+  const {accessToken, userId} = useAuth();
 
   const {
     document,
@@ -92,7 +92,7 @@ const DocumentMenuBar = () => {
         </div>
       </div>
       <div className="flex items-center flex-shrink-0 pl-3 gap-x-4">
-        {document !== null && document.userID === userID && (
+        {document !== null && document.userId === userId && (
           <ShareDocument/>
         )}
         <div className="flex items-center gap-x-2">

@@ -4,19 +4,19 @@ import API from "./api";
 const DocumentUserService = {
   create: (
     accessToken: string,
-    payload: { documentID: number; email: string; permission: PermissionEnum }
+    payload: { documentId: number; email: string; permission: PermissionEnum }
   ) => {
-    return API.post(`document/${payload.documentID}/share`, payload, {
+    return API.post(`document/${payload.documentId}/share`, payload, {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   },
 
   delete: (
     accessToken: string,
-    payload: { documentID: number; userID: number }
+    payload: { documentId: number; userId: number }
   ) => {
     return API.delete(
-      `document/${payload.documentID}/share/${payload.userID}`,
+      `document/${payload.documentId}/share/${payload.userId}`,
       {headers: { Authorization: `Bearer ${accessToken}` },}
     );
   },

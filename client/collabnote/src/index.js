@@ -31,7 +31,7 @@ root.render(
               path="/document/:id" element={<AuthRoute element={
                     <DocumentProvider>
                       <EditorProvider>
-                        <Document />
+                        <Document/>
                       </EditorProvider>
                     </DocumentProvider>
                   }/>

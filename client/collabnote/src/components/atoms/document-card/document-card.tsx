@@ -10,16 +10,16 @@ interface DocumentCardProps {
 }
 
 const DocumentCard = ({document, setDocuments}: DocumentCardProps) => {
-  const {userID} = useAuth();
+  const {userId} = useAuth();
   const navigate = useNavigate();
 
   const handleDocumentBtnClick = (
     event: MouseEvent<HTMLDivElement>,
-    documentID: number
+    documentId: number
   ) => {
     const classList = (event.target as HTMLDivElement).classList;
-    if (!classList.contains(`document-menu-btn-${documentID}`) && !classList.contains("document-menu")) {
-      navigate(`/document/${documentID}`);
+    if (!classList.contains(`document-menu-btn-${documentId}`) && !classList.contains("document-menu")) {
+      navigate(`/document/${documentId}`);
     }
   };
 
@@ -65,9 +65,9 @@ const DocumentCard = ({document, setDocuments}: DocumentCardProps) => {
                 })}
               </p>
             </div>
-            {document.userID === userID && (
+            {document.userId === userId && (
               <DocumentMenuButton
-                documentID={document.id}
+                documentId={document.id}
                 setDocuments={setDocuments}/>)}
           </div>
         </div>

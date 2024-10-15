@@ -5,18 +5,18 @@ import DocumentInterface from "../types/interfaces/document";
 import DocumentService from "../services/document-service";
 import axios, {AxiosError} from "axios";
 
-const useDocument = (documentID: number) => {
+const useDocument = (documentId: number) => {
   const {accessToken} = useAuth();
   const {error} = useContext(ToastContext);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Array<string>>([]);
   const [document, setDocument] = useState<null | DocumentInterface>(null);
 
-  const loadDocument = async (accessToken: string, documentID: number) => {
+  const loadDocument = async (accessToken: string, documentId: number) => {
     setLoading(true);
 
     try {
-      const response = await DocumentService.get(accessToken, documentID);
+      const response = await DocumentService.get(accessToken, documentId);
       setDocument(response.data as DocumentInterface);
     } 
     catch (error: any) {
@@ -47,8 +47,8 @@ const useDocument = (documentID: number) => {
     useEffect(() => {
         if (accessToken === null) 
             return;
-            loadDocument(accessToken, documentID);
-    }, [accessToken, documentID]);
+            loadDocument(accessToken, documentId);
+    }, [accessToken, documentId]);
 
     useEffect(() => {
         if (errors.length) {

@@ -15,8 +15,8 @@ const useAuth = () => {
     loadingAuth,
     setLoadingAuth,
     errors,
-    userID,
-    setUserID,
+    userId,
+    setUserId,
     email,
     setEmail,
   } = useContext(AuthContext);
@@ -29,7 +29,7 @@ const useAuth = () => {
   const login = (accessToken: string, refreshToken: string) => {
     const { exp, id, email } = jwt_decode<Token>(accessToken);
     silentRefresh(exp);
-    setUserID(id);
+    setUserId(id);
     setEmail(email);
     setAccessToken(accessToken);
     setRefreshToken(refreshToken);
@@ -59,7 +59,7 @@ const useAuth = () => {
   const destoryAuth = () => {
     setRefreshToken(null);
     setAccessToken(null);
-    setUserID(null);
+    setUserId(null);
     setEmail(null);
     setIsAuthenticated(false);
   };
@@ -87,7 +87,7 @@ const useAuth = () => {
     loading,
     loadingAuth,
     errors,
-    userID,
+    userId,
     email,
     login,
     logout,

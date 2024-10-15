@@ -11,8 +11,8 @@ interface AuthContextInterface {
   setLoadingAuth: Dispatch<SetStateAction<boolean>>;
   errors: Array<string>;
   setErrors: Dispatch<SetStateAction<Array<string>>>;
-  userID: number | null;
-  setUserID: Dispatch<SetStateAction<number | null>>;
+  userId: number | null;
+  setUserId: Dispatch<SetStateAction<number | null>>;
   email: string | null;
   setEmail: Dispatch<SetStateAction<string | null>>;
 }
@@ -28,8 +28,8 @@ const defaultValues = {
   setLoadingAuth: () => {},
   errors: [],
   setErrors: () => {},
-  userID: null,
-  setUserID: () => {},
+  userId: null,
+  setUserId: () => {},
   email: null,
   setEmail: () => {},
 };
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }: AuthProviderInterface) => {
     defaultValues.loadingAuth
   );
   const [errors, setErrors] = useState<Array<string>>(defaultValues.errors);
-  const [userID, setUserID] = useState<number | null>(defaultValues.userID);
+  const [userId, setUserId] = useState<number | null>(defaultValues.userId);
   const [email, setEmail] = useState<string | null>(defaultValues.email);
 
   return (
@@ -68,8 +68,8 @@ export const AuthProvider = ({ children }: AuthProviderInterface) => {
         setLoadingAuth,
         errors,
         setErrors,
-        userID,
-        setUserID,
+        userId,
+        setUserId,
         email,
         setEmail,
       }}
