@@ -99,7 +99,7 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
         JSON.parse(document.content) as RawDraftContentState
       );
       const newEditorState = EditorState.createWithContent(contentState);
-      setEditorState(EditorState.moveSelectionToEnd(newEditorState));
+      setEditorState(newEditorState);
     } 
     catch {
       error("Error when loading document.");
