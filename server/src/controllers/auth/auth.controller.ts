@@ -30,7 +30,7 @@ class AuthController {
     public refreshToken = catchAsync(async (req: Request, res: Response) => {
         // Validate for request body if there is an error
         const error = validationResult(req);
-        if(!error.isEmpty){
+        if(!error.isEmpty()){
             return res.status(400).json(error);
         }
 
@@ -57,8 +57,8 @@ class AuthController {
     public logout = catchAsync(async (req: Request, res: Response) => {
         if (!req.user) return res.sendStatus(401);
 
-        const userID = parseInt(req.user.id);
-        await userService.logoutUser(userID);
+        const userId = parseInt(req.user.id);
+        await userService.logoutUser(userId);
 
         return res.sendStatus(200);
     })

@@ -22,9 +22,9 @@ class UserController {
     })
 
     public getUser = catchAsync(async (req: Request, res: Response) => {
-        const userID = parseInt(req.params.id);
+        const userId = parseInt(req.params.id);
 
-        const user = await userService.findUserById(userID);
+        const user = await userService.findUserById(userId);
 
         if(user === null) return res.sendStatus(400);
 

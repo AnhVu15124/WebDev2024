@@ -22,7 +22,7 @@ class ShareController {
         if(!document) return res.sendStatus(404);
 
         // Check if owner is sharing document
-        if(!req.user?.id || document.userID !== parseInt(req.user.id)) return res.sendStatus(400);
+        if(!req.user?.id || document.userId !== parseInt(req.user.id)) return res.sendStatus(400);
 
         const {email, permission} = req.body;
 
@@ -35,8 +35,8 @@ class ShareController {
         if(!sharedUser) return res.sendStatus(400);
 
         const documentUser = await DocumentUser.create({
-            documentID: id,
-            userID: sharedUser.id,
+            documentId: id,
+            userId: sharedUser.id,
             permission: permission,
             title: document.title
         })
@@ -59,12 +59,12 @@ class ShareController {
         const error = validationResult(req);
         if (!error.isEmpty()) return res.status(400).json(error);
 
-        const {documentID, userID} = req.params;
+        const {documentId, userId} = req.params;
 
         const document = await Document.findOne({
             where: {
-                id: documentID,
-                userID: req.user?.id
+                id: documentId,
+                userId: req.user?.id
             }
         });
 
@@ -72,8 +72,8 @@ class ShareController {
 
         const query = {
             where: {
-                documentID,
-                userID
+                documentId,
+                userId
             }
         }
 

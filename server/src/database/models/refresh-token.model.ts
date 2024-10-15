@@ -8,7 +8,7 @@ class RefreshToken extends Model {
     token!: string;
 
     @ForeignKey(() => User)
-    userID!: number;
+    userId!: number;
 
     @BelongsTo(() => User)
     user!: User;

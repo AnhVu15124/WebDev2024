@@ -4,12 +4,12 @@ import {DocumentUser} from "../database/models/document-user.model";
 
 class documentService {
 
-    public findDocumentById = async (id: number, userID: number) => {
+    public findDocumentById = async (id: number, userId: number) => {
         // Fetch document from database
         let document = await Document.findOne({
             where: {
                 [Op.or]: [                      // Operation OR
-                    {id: id, userID: userID},
+                    {id: id, userId: userId},
                     {id: id, isPublic: true},
                 ],
             },
@@ -18,8 +18,8 @@ class documentService {
         if (!document) {
             const sharedDocument = await DocumentUser.findOne({
                 where: {
-                    documentID: id,
-                    userID: userID,
+                    documentId: id,
+                    userId: userId,
                 },
                 include: {
                     model: Document,

@@ -19,6 +19,6 @@ router.delete("/:id", authenticate, documentController.delete);
 
 router.post("/:id/share", authenticate, shareValidator.create, shareController.create);
 
-router.delete("/:documentID/share/:userID", authenticate, shareController.delete);
+router.delete("/:documentId/share/:userId", authenticate, shareController.delete);
 
 export default router;

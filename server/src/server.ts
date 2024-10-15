@@ -22,9 +22,9 @@ server.listen(port, '0.0.0.0', () => {
 
 io.on("connection", (socket) => {
   const accessToken = socket.handshake.query.accessToken as string | undefined;
-  const documentID = socket.handshake.query.documentID as string | undefined;
+  const documentId = socket.handshake.query.documentId as string | undefined;
 
-  if (!accessToken || !documentID) return socket.disconnect();
+  if (!accessToken || !documentId) return socket.disconnect();
   else {
     jwt.verify(
       accessToken,
@@ -34,16 +34,16 @@ io.on("connection", (socket) => {
         (socket as any).username = email;
 
         documentService
-          .findDocumentById(parseInt(documentID), parseInt(id))
+          .findDocumentById(parseInt(documentId), parseInt(id))
           .then(async (document) => {
             if (document === null) return socket.disconnect();
 
-            socket.join(documentID);
+            socket.join(documentId);
 
-            io.in(documentID)
+            io.in(documentId)
               .fetchSockets()
               .then((clients) => {
-                io.sockets.in(documentID).emit(
+                io.sockets.in(documentId).emit(
                   SocketEvent.CURRENT_USERS_UPDATE,
                   clients.map((client) => (client as any).username)
                 );
@@ -51,17 +51,17 @@ io.on("connection", (socket) => {
 
             socket.on(SocketEvent.SEND_CHANGES, (rawDraftContentState) => {
               socket.broadcast
-                .to(documentID)
+                .to(documentId)
                 .emit(SocketEvent.RECEIVE_CHANGES, rawDraftContentState);
             });
 
             socket.on("disconnect", async () => {
-              socket.leave(documentID);
+              socket.leave(documentId);
               socket.disconnect();
-              io.in(documentID)
+              io.in(documentId)
                 .fetchSockets()
                 .then((clients) => {
-                  io.sockets.in(documentID).emit(
+                  io.sockets.in(documentId).emit(
                     SocketEvent.CURRENT_USERS_UPDATE,
                     clients.map((client) => (client as any).username)
                   );

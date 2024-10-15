@@ -35,9 +35,9 @@ const authorize = (permittedRoles: RoleEnum[]) => {
             res.sendStatus(401);
             return;
         }
-        const userID = req.user.id;
+        const userId = req.user.id;
 
-        UserRole.findAll({where: {userID}, include: Role}).then((data) => {
+        UserRole.findAll({where: {userId}, include: Role}).then((data) => {
             const roles = data.map((userRole) => userRole.role.name);
             if (permittedRoles.some((permittedRole) => roles.includes(permittedRole))) {
                 next();

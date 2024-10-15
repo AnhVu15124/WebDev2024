@@ -15,7 +15,7 @@ class DocumentUser extends Model {
     @ForeignKey(() => User)
     @PrimaryKey
     @Column
-    userID!: number;                    // "Which user"
+    userId!: number;                    // "Which user"
 
     @BelongsTo(() => Document)
     document!: Document;
@@ -23,7 +23,7 @@ class DocumentUser extends Model {
     @ForeignKey(() => Document)
     @PrimaryKey
     @Column
-    documentID!: number;                // "Which doc"
+    documentId!: number;                // "Which doc"
 }
 
 export {DocumentUser};

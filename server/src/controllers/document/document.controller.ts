@@ -27,13 +27,13 @@ class DocumentController {
         // Fetch all documents from database
         const documents = await Document.findAll({
             where: {
-                userID: req.user?.id,
+                userId: req.user?.id,
             },
         })
 
         const documentUsers = await DocumentUser.findAll({
             where: {
-                userID: req.user?.id,
+                userId: req.user?.id,
             },
             include: {
                 model: Document,
@@ -78,7 +78,7 @@ class DocumentController {
     public create = catchAsync(async (req: Request, res: Response) => {
         // Create a new document in the database
         const document = await Document.create({
-            userID: req.user?.id
+            userId: req.user?.id
         })
 
         return res.status(201).json(document)
@@ -91,7 +91,7 @@ class DocumentController {
         await Document.destroy({
             where: {
                 id: id,
-                userID: req.user?.id,
+                userId: req.user?.id,
             }
         });
 

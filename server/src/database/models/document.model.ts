@@ -37,7 +37,7 @@ class Document extends Model {
     content!: string;               // Content of Doc
 
     @ForeignKey(() => User)
-    userID!: number;
+    userId!: number;
 
     @BelongsTo(() => User)
     user!: User;

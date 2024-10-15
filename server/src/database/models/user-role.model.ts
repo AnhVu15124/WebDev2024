@@ -11,7 +11,7 @@ class UserRole extends Model {
     @ForeignKey(() => User)
     @PrimaryKey
     @Column
-    userID!: number;                // "Which User"
+    userId!: number;                // "Which User"
 
     @BelongsTo(() => Role)
     role!: Role;

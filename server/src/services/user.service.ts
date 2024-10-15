@@ -2,6 +2,7 @@ import {User} from "../database/models/user.model";
 import {compare, genSalt, hash} from "bcrypt";
 import jwt from "jsonwebtoken";
 import {RefreshToken} from "../database/models/refresh-token.model";
+
 import dotenv from "dotenv";
 import {mailService} from "./mail.service";
 dotenv.config();
@@ -36,7 +37,7 @@ class UserService {
             from: process.env.SMTP_USER,
             to: user.email,
             subject: "Verify your email for our Collaborative Note-Taing App",
-            text: `Click this link to verify your email: http://192.168.1.110:3000/user/verify-email/${user.verificationToken}`,
+            text: `Click this link to verify your email: http://192.168.1.110:3000/user/verify-email/${user.verificationToken}`
         }
 
         await mailService.sendMail(mail);
@@ -80,12 +81,12 @@ class UserService {
 
         await RefreshToken.destroy({
             force: true,
-            where: {userID: requestUser.id}
+            where: {userId: requestUser.id}
         })
 
         await RefreshToken.create({
             token: refreshToken,
-            userID: requestUser.id
+            userId: requestUser.id
         })
 
         return {accessToken, refreshToken};
@@ -99,9 +100,9 @@ class UserService {
         return refreshToken !== null;
     };
 
-    public logoutUser = async (userID: number) => {
+    public logoutUser = async (userId: number) => {
         await RefreshToken.destroy({
-            where: {userID}
+            where: {userId}
         });
     };
 
@@ -126,9 +127,9 @@ class UserService {
             from: process.env.SMTP_USER,
             to: user.email,
             subject: "Reset your password for our Collaborative Note-Taking App",
-            text: `Click this link to reset your password: http://192.168.1.110:3000/user/reset-email/${user.passwordResetToken}`,
-        };
-    
+            text: `Click this link to reset your password: http://192.168.1.110:3000/user/reset-email/${user.passwordResetToken}`
+        }
+
         await mailService.sendMail(mail);
     }
 
