@@ -63,7 +63,7 @@ import {ChangeEvent, KeyboardEvent, useContext, useRef, useState} from "react";
   
       let url = window.location.href;
       if (url.includes("localhost")) {
-        url = url.replace("localhost", "192.168.1.110");
+        url = url.replace("localhost", "192.168.245.23");
       }
       copyLinkInputRef.current.value = url;
       copyLinkInputRef.current.focus();

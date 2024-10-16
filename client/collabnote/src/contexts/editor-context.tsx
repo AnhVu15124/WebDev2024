@@ -45,7 +45,7 @@ interface EditorProviderInterface {
 const DEFAULT_SAVE_TIME = 1000;
 let saveInterval: null | NodeJS.Timeout = null;
 
-export const EditorProvider = ({ children }: EditorProviderInterface) => {
+export const EditorProvider = ({children}: EditorProviderInterface) => {
   const [editorState, setEditorState] = useState(defaultValues.editorState);
   const socket = useRef<any>(defaultValues.socket);
   const [documentRendered, setDocumentRendered] = useState(
@@ -54,10 +54,9 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
   const editorRef = useRef<null | Editor>(defaultValues.editorRef);
   const [currentFont, setCurrentFont] = useState(defaultValues.currentFont);
 
-  const { document, setCurrentUsers, setSaving, setDocument, saveDocument } =
-    useContext(DocumentContext);
-  const { error } = useContext(ToastContext);
-  const { accessToken } = useAuth();
+  const {document, setCurrentUsers, setSaving, setDocument, saveDocument} = useContext(DocumentContext);
+  const {error} = useContext(ToastContext);
+  const {accessToken} = useAuth();
 
   const focusEditor = () => {
     if (editorRef === null || editorRef.current === null) return;
@@ -107,7 +106,7 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
         JSON.parse(document.content) as RawDraftContentState
       );
       const newEditorState = EditorState.createWithContent(contentState);
-      setEditorState(newEditorState);
+      setEditorState(EditorState.moveSelectionToEnd(newEditorState));
     } 
     catch {
       error("Error when loading document.");
@@ -140,8 +139,10 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
 
     const handler = (rawDraftContentState: RawDraftContentState) => {
       const contentState = convertFromRaw(rawDraftContentState);
-      const newEditorState = EditorState.createWithContent(contentState);
-      setEditorState(newEditorState);
+      const currentSelection = editorState.getSelection(); 
+      let newEditorState = EditorState.createWithContent(contentState);
+      newEditorState = EditorState.acceptSelection(newEditorState, currentSelection); 
+      setEditorState(newEditorState); 
     };
 
     socket.current.on(SocketEvent.RECEIVE_CHANGES, handler);
@@ -179,8 +180,7 @@ export const EditorProvider = ({ children }: EditorProviderInterface) => {
         setCurrentFont,
         focusEditor,
         handleEditorChange,
-      }}
-    >
+      }}>
       {children}
     </EditorContext.Provider>
   );
