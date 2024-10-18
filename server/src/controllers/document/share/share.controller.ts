@@ -46,7 +46,7 @@ class ShareController {
             to: sharedUser.email,
             subject: `${req.user.email} shared a document with you`,
             text: `You have been granted access to the document ${document.title}.
-                   You can view the document at http://192.168.245.23:3000/document/${id}`,
+                   You can view the document at http://192.168.1.110:3000/document/${id}`,
         }
 
         // Send email to shared user
