@@ -63,7 +63,7 @@ import {ChangeEvent, KeyboardEvent, useContext, useRef, useState} from "react";
   
       let url = window.location.href;
       if (url.includes("localhost")) {
-        url = url.replace("localhost", "192.168.245.23");
+        url = url.replace("localhost", "192.168.1.110");
       }
       copyLinkInputRef.current.value = url;
       copyLinkInputRef.current.focus();
@@ -131,7 +131,7 @@ import {ChangeEvent, KeyboardEvent, useContext, useRef, useState} from "react";
     return (
       <Modal
         button={
-          <button className="btn-primary flex items-center space-x-1 bg-blue-500 rounded-lg text-white px-4 py-2 hover:bg-blue-600">
+          <button className="btn-primary flex items-center space-x-1 bg-blue-500 rounded-full text-white px-4 py-2 hover:bg-blue-600">
             {document.isPublic ? (
               <>
                 <svg 

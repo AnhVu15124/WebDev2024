@@ -96,8 +96,8 @@ const DocumentMenuBar = () => {
           <ShareDocument/>
         )}
         <div className="flex items-center gap-x-2">
-          <CurrentUsers />
-          <UserDropDown />
+          <CurrentUsers/>
+          <UserDropDown/>
         </div>
       </div>
     </div>

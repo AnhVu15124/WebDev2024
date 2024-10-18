@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import {useContext, useEffect, useState} from "react";
 import useAuth from "./use-auth";
 import DocumentInterface from "../types/interfaces/document";
-import { ToastContext } from "../contexts/toast-context";
+import {ToastContext} from "../contexts/toast-context";
 import DocumentService from "../services/document-service";
 
 const useDocuments = () => {
@@ -16,9 +16,11 @@ const useDocuments = () => {
     try {
       const response = await DocumentService.list(accessToken);
       setDocuments(response.data as Array<DocumentInterface>);
-    } catch (err) {
+    } 
+    catch (err) {
       error("Unable to load documents. Please try again.");
-    } finally {
+    } 
+    finally {
       setLoading(false);
     }
   };

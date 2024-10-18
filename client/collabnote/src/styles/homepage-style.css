@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-start; 
   align-items: center; 
-  padding-left: 100px; 
+  padding-left: 5%; 
 }
 
 .header svg {
@@ -131,7 +131,7 @@
 }
 
 .function {
-  width: 80vw; 
+  width: 90vw; 
   height: 160vw;
   color: #203957;
   display: flex;
@@ -140,13 +140,14 @@
   align-items: left;
   padding: 0;
   text-align: left;
-  margin-left: 180px;
+  margin-left: 160px;
 }
 .function h1{
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold; 
   margin-bottom: 70px;
+  margin-left: -160px;
 }
 .function .function-box-1 {
   display: flex; 
@@ -194,7 +195,7 @@
   border-radius: 4%;
   width: 800px; 
   height: 374px; 
-  margin-left: 30px;
+  margin-left: 22px;
 }
 .function .function-box-4 {
   display: flex; 

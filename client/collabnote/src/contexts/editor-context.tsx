@@ -66,7 +66,7 @@ export const EditorProvider = ({children}: EditorProviderInterface) => {
 
   //Send Changes
   const handleEditorChange = (editorState: EditorState) => {
-    setEditorState(editorState);
+    setEditorState(EditorState.moveSelectionToEnd(editorState));
 
     if (socket === null) return;
 
@@ -122,7 +122,7 @@ export const EditorProvider = ({children}: EditorProviderInterface) => {
       return;
 
     socket.current = io(BASE_URL, {
-      query: { documentId: document.id, accessToken },
+      query: {documentId: document.id, accessToken},
     }).connect();
   }, [document, socket, accessToken]);
 
@@ -139,12 +139,10 @@ export const EditorProvider = ({children}: EditorProviderInterface) => {
 
     const handler = (rawDraftContentState: RawDraftContentState) => {
       const contentState = convertFromRaw(rawDraftContentState);
-      const currentSelection = editorState.getSelection(); 
-      let newEditorState = EditorState.createWithContent(contentState);
-      newEditorState = EditorState.acceptSelection(newEditorState, currentSelection); 
-      setEditorState(newEditorState); 
+      const newEditorState = EditorState.createWithContent(contentState);
+      setEditorState(EditorState.moveSelectionToEnd(newEditorState)); 
     };
-
+    
     socket.current.on(SocketEvent.RECEIVE_CHANGES, handler);
 
     return () => {

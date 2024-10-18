@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { AuthContext } from "../contexts/auth-context";
+import {useContext} from "react";
+import {AuthContext} from "../contexts/auth-context";
 import useLocalStorage from "./use-local-storage";
 import jwt_decode from "jwt-decode";
 import Token from "../types/interfaces/token";
@@ -40,8 +40,10 @@ const useAuth = () => {
     if (!accessToken) return;
     try {
       await AuthService.logout(accessToken);
-    } catch {
-    } finally {
+    } 
+    catch {
+    } 
+    finally {
       destoryAuth();
     }
   };
@@ -74,9 +76,11 @@ const useAuth = () => {
       const response = await AuthService.refreshToken({ token: refreshToken });
       const {accessToken: newAccessToken, refreshToken: newRefreshToken} = response.data;
       login(newAccessToken, newRefreshToken);
-    } catch (error) {
+    } 
+    catch (error) {
       destoryAuth();
-    } finally {
+    } 
+    finally {
       setLoadingAuth(false);
     }
   };

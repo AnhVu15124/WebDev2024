@@ -12,6 +12,7 @@ const Document = () => {
   const documentHeaderRef = useRef<null | HTMLDivElement>(null);
   const {loading, document} = useDocument(parseInt(documentId as string));
   const {setDocument} = useContext(DocumentContext);
+  
   const documentViewerHeight = `calc(${heightStr} - ${documentHeaderRef.current?.clientHeight}px)`;
 
   useEffect(() => {if (document !== null) setDocument(document);}, [document]);
