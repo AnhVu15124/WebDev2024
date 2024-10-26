@@ -60,13 +60,12 @@ export const EditorProvider = ({children}: EditorProviderInterface) => {
 
   const focusEditor = () => {
     if (editorRef === null || editorRef.current === null) return;
-
     editorRef.current.focus();
   };
 
   //Send Changes
   const handleEditorChange = (editorState: EditorState) => {
-    setEditorState(EditorState.moveSelectionToEnd(editorState));
+    setEditorState(editorState);
 
     if (socket === null) return;
 

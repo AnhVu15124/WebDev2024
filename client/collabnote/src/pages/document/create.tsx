@@ -10,7 +10,7 @@ import "../../styles/create-document-style.css";
 
 const Create = () => {
   const {heightStr} = useWindowSize();
-  const {userId } = useAuth();
+  const {userId} = useAuth();
   const {documents, loading, setDocuments} = useDocuments();
   const [activeTab, setActiveTab] = useState("recent");
 
@@ -21,7 +21,7 @@ const Create = () => {
     documents === null ? [] : documents.filter((document) => document.userId !== userId);
 
   return (
-    <div style={{ height: heightStr }}>
+    <div style={{height: heightStr}}>
       <DocumentCreateHeader />
       <CreateDocumentButton />
 

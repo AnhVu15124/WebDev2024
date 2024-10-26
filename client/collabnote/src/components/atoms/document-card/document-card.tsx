@@ -42,7 +42,7 @@ const DocumentCard = ({document, setDocuments}: DocumentCardProps) => {
       onClick={(event) => handleDocumentBtnClick(event, document.id)}
       key={document.id}
       className="text-left cursor-pointer">
-      <div className="h-80 w-full border flex flex-col justify-between hover:border-blue-500 rounded">
+      <div className="h-80 w-full border-2 border-gray-300 flex flex-col justify-between hover:border-blue-500 rounded">
         <div className="w-full h-full p-4 flex flex-col space-y-2">
           {skeleton}
         </div>

@@ -1,14 +1,14 @@
-import { lazy, useContext, useState } from "react";
-import { ToastContext } from "../../../contexts/toast-context";
+import {lazy, useContext, useState} from "react";
+import {ToastContext} from "../../../contexts/toast-context";
 import useAuth from "../../../hooks/use-auth";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import DocumentService from "../../../services/document-service";
 import DocumentInterface from "../../../types/interfaces/document";
-import { PlusIcon } from "@heroicons/react/outline";
+import {PlusIcon} from "@heroicons/react/outline";
 
 const CreateDocumentButton = () => {
-  const { error } = useContext(ToastContext);
-  const { accessToken } = useAuth();
+  const {error} = useContext(ToastContext);
+  const {accessToken} = useAuth();
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -19,12 +19,14 @@ const CreateDocumentButton = () => {
 
     try {
       const response = await DocumentService.create(accessToken);
-      const { id } = response.data as DocumentInterface;
+      const {id} = response.data as DocumentInterface;
 
       navigate(`/document/${id}`);
-    } catch (err) {
+    } 
+    catch (err) {
       error("Unable to create a new note. Please try again");
-    } finally {
+    } 
+    finally {
       setLoading(false);
     }
   };
